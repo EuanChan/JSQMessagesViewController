@@ -155,8 +155,13 @@
 
     if ([self.text length] == 0 && self.placeHolder) {
         [self.placeHolderTextColor set];
+        CGRect drawRect = rect;
+        drawRect.origin.x += (self.textContainerInset.left + self.contentInset.left + 4);
+        drawRect.origin.y += (self.textContainerInset.top + self.contentInset.top);
+        drawRect.size.width -= (self.textContainerInset.left + self.contentInset.left + self.textContainerInset.right + self.contentInset.right + 4);
+        drawRect.size.height -= (self.textContainerInset.top + self.contentInset.top + self.textContainerInset.bottom + self.contentInset.bottom);
 
-        [self.placeHolder drawInRect:CGRectInset(rect, 7.0f, 5.0f)
+        [self.placeHolder drawInRect:drawRect
                       withAttributes:[self jsq_placeholderTextAttributes]];
     }
 }
