@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell top label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxM-YD-sVG" userLabel="Cell top label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                        <rect key="frame" x="0.0" y="10" width="320" height="20"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="9oK-E7-iXA"/>
@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bubble top label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p52-YN-yLu" userLabel="Bubble top label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="20" width="320" height="20"/>
+                        <rect key="frame" x="0.0" y="30" width="320" height="20"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="8TB-va-f8L"/>
@@ -34,13 +34,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zh-vR-QJW" userLabel="Bubble container">
-                        <rect key="frame" x="33" y="40" width="244" height="94"/>
+                        <rect key="frame" x="26" y="50" width="244" height="74"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2qm-c6-OZf" userLabel="Bubble Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="244" height="74"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLY-aM-0Dr" customClass="JSQMessagesCellTextView">
-                                <rect key="frame" x="0.0" y="0.0" width="238" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="238" height="74"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -60,7 +60,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X89-B1-aAd" userLabel="Avatar container">
-                        <rect key="frame" x="279" y="40" width="35" height="35"/>
+                        <rect key="frame" x="272" y="50" width="35" height="35"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-D9-Q7W" userLabel="Avatar Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -77,7 +77,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell bottom label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uc-dI-YDD" userLabel="Cell bottom label" customClass="JSQMessagesLabel">
-                        <rect key="frame" x="0.0" y="134" width="320" height="20"/>
+                        <rect key="frame" x="0.0" y="124" width="320" height="20"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="cPs-M4-tjX"/>
@@ -94,11 +94,11 @@
                 <constraint firstItem="2zh-vR-QJW" firstAttribute="top" secondItem="p52-YN-yLu" secondAttribute="bottom" id="3Wx-g0-fTc"/>
                 <constraint firstAttribute="trailing" secondItem="jxM-YD-sVG" secondAttribute="trailing" id="AwY-g7-f1T"/>
                 <constraint firstItem="X89-B1-aAd" firstAttribute="top" secondItem="p52-YN-yLu" secondAttribute="bottom" id="Dr8-FL-0Kk"/>
-                <constraint firstItem="jxM-YD-sVG" firstAttribute="top" secondItem="23f-xH-rkY" secondAttribute="top" id="HYT-Tw-whz"/>
-                <constraint firstAttribute="trailing" secondItem="X89-B1-aAd" secondAttribute="trailing" constant="6" id="KLt-Ix-wDa"/>
+                <constraint firstItem="jxM-YD-sVG" firstAttribute="top" secondItem="23f-xH-rkY" secondAttribute="top" constant="10" id="HYT-Tw-whz"/>
+                <constraint firstAttribute="trailing" secondItem="X89-B1-aAd" secondAttribute="trailing" constant="13" id="KLt-Ix-wDa"/>
                 <constraint firstItem="7Uc-dI-YDD" firstAttribute="top" secondItem="2zh-vR-QJW" secondAttribute="bottom" id="Ngq-ew-t2K"/>
                 <constraint firstItem="7Uc-dI-YDD" firstAttribute="leading" secondItem="23f-xH-rkY" secondAttribute="leading" id="fiS-g3-X16"/>
-                <constraint firstAttribute="bottom" secondItem="7Uc-dI-YDD" secondAttribute="bottom" id="gXo-9b-b1W"/>
+                <constraint firstAttribute="bottom" secondItem="7Uc-dI-YDD" secondAttribute="bottom" constant="10" id="gXo-9b-b1W"/>
                 <constraint firstAttribute="trailing" secondItem="p52-YN-yLu" secondAttribute="trailing" id="gen-N0-uZj"/>
                 <constraint firstItem="p52-YN-yLu" firstAttribute="top" secondItem="jxM-YD-sVG" secondAttribute="bottom" id="jBD-JV-AWk"/>
                 <constraint firstItem="jxM-YD-sVG" firstAttribute="leading" secondItem="23f-xH-rkY" secondAttribute="leading" id="qeB-G5-1Wq"/>

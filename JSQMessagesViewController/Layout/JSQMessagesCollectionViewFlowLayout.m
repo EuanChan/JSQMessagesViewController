@@ -61,8 +61,8 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
 - (void)jsq_configureFlowLayout
 {
     self.scrollDirection = UICollectionViewScrollDirectionVertical;
-    self.sectionInset = UIEdgeInsetsMake(10.0f, 4.0f, 10.0f, 4.0f);
-    self.minimumLineSpacing = 4.0f;
+    self.sectionInset = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
+    self.minimumLineSpacing = 6.0f;
     
     _messageBubbleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
@@ -70,10 +70,10 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
         _messageBubbleLeftRightMargin = 240.0f;
     }
     else {
-        _messageBubbleLeftRightMargin = 50.0f;
+        _messageBubbleLeftRightMargin = 70.0f;
     }
     
-    _messageBubbleTextViewFrameInsets = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 6.0f);
+    _messageBubbleTextViewFrameInsets = UIEdgeInsetsMake(2.0f, 0.0f, 2.0f, 4.0f);
     _messageBubbleTextViewTextContainerInsets = UIEdgeInsetsMake(7.0f, 14.0f, 7.0f, 14.0f);
     
     CGSize defaultAvatarSize = CGSizeMake(kJSQMessagesCollectionViewAvatarSizeDefault, kJSQMessagesCollectionViewAvatarSizeDefault);
@@ -416,11 +416,15 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
 {
     CGSize messageBubbleSize = [self messageBubbleSizeForItemAtIndexPath:indexPath];
     JSQMessagesCollectionViewLayoutAttributes *attributes = (JSQMessagesCollectionViewLayoutAttributes *)[self layoutAttributesForItemAtIndexPath:indexPath];
+
+    if (messageBubbleSize.height < 35.f)
+        messageBubbleSize.height = 35.f;
     
-    CGFloat finalHeight = messageBubbleSize.height;
+    CGFloat finalHeight = 10.f + messageBubbleSize.height;
     finalHeight += attributes.cellTopLabelHeight;
     finalHeight += attributes.messageBubbleTopLabelHeight;
     finalHeight += attributes.cellBottomLabelHeight;
+    finalHeight += 10.f;
     
     return CGSizeMake(self.itemWidth, ceilf(finalHeight));
 }
