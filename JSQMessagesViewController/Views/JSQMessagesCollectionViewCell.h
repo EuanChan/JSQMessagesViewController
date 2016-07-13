@@ -154,6 +154,8 @@
  */
 @property (weak, nonatomic, readonly) UIView *avatarContainerView;
 
+@property(weak, nonatomic, readonly) UIActivityIndicatorView *sendingIndicatorView;
+
 /**
  *  The media view of the cell. This view displays the contents of a media message.
  *
