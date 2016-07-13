@@ -93,16 +93,16 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="mJR-DI-B2t" firstAttribute="bottom" secondItem="KYU-B8-cUW" secondAttribute="bottom" id="0yf-sW-bLV"/>
+                <constraint firstItem="mJR-DI-B2t" firstAttribute="leading" secondItem="btS-p8-B7Z" secondAttribute="trailing" constant="8" id="4h4-TV-Kp4"/>
                 <constraint firstItem="UPz-5x-c1T" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="54r-MX-MGW"/>
                 <constraint firstAttribute="trailing" secondItem="UPz-5x-c1T" secondAttribute="trailing" id="G3U-h0-DWS"/>
+                <constraint firstItem="mJR-DI-B2t" firstAttribute="bottom" secondItem="btS-p8-B7Z" secondAttribute="bottom" id="Hax-nh-OSd"/>
                 <constraint firstAttribute="trailing" secondItem="afj-rd-iNv" secondAttribute="trailing" id="Ka4-Dy-jCS"/>
                 <constraint firstItem="afj-rd-iNv" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="OnD-mZ-QtR"/>
                 <constraint firstItem="Ufa-bF-l1Y" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="Z5z-m3-8Ne"/>
                 <constraint firstItem="afj-rd-iNv" firstAttribute="top" secondItem="4lh-CK-yVn" secondAttribute="top" constant="10" id="ZG9-2M-N52"/>
                 <constraint firstAttribute="trailing" secondItem="Ufa-bF-l1Y" secondAttribute="trailing" id="cWQ-1Q-xOA"/>
                 <constraint firstItem="Ufa-bF-l1Y" firstAttribute="top" secondItem="afj-rd-iNv" secondAttribute="bottom" id="i9Y-sV-v6b"/>
-                <constraint firstItem="mJR-DI-B2t" firstAttribute="leading" secondItem="KYU-B8-cUW" secondAttribute="trailing" constant="8" id="inb-yw-jsC"/>
                 <constraint firstItem="btS-p8-B7Z" firstAttribute="leading" secondItem="Da1-09-wR4" secondAttribute="trailing" constant="2" id="j0I-pm-eex"/>
                 <constraint firstItem="btS-p8-B7Z" firstAttribute="top" secondItem="Ufa-bF-l1Y" secondAttribute="bottom" id="jAu-Dn-7rN"/>
                 <constraint firstItem="Da1-09-wR4" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" constant="13" id="jiu-B4-TSD"/>
