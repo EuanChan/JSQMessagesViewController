@@ -91,7 +91,6 @@
                     </activityIndicatorView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hbN-sq-bZg">
                         <rect key="frame" x="-2" y="104" width="20" height="20"/>
-                        <color key="backgroundColor" red="0.062745098040000002" green="0.65098039220000004" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

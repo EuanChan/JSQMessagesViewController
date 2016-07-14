@@ -81,4 +81,9 @@
  */
 + (UIImage *)jsq_defaultPauseImage;
 
+/**
+ * @return The send error image.
+ */
++ (UIImage *)jsq_sendErrorImage;
+
 @end

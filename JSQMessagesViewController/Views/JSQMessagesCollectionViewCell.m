@@ -24,7 +24,6 @@
 
 #import "UIView+JSQMessages.h"
 #import "UIDevice+JSQMessages.h"
-
 #import "UIImage+JSQMessages.h"
 
 
@@ -132,8 +131,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     self.cellBottomLabel.font = [UIFont systemFontOfSize:11.0f];
     self.cellBottomLabel.textColor = [UIColor lightGrayColor];
     
-    
-    self.sendingFailureImageView.image = [UIImage imageNamed:@"ic_warning"];
+    self.sendingFailureImageView.image = [UIImage jsq_sendErrorImage];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jsq_handleTapGesture:)];
     [self addGestureRecognizer:tap];

@@ -93,4 +93,10 @@
   return [UIImage jsq_bubbleImageFromBundleWithName:@"pause"];
 }
 
++ (UIImage *)jsq_sendErrorImage {
+    NSBundle *bundle = [NSBundle jsq_messagesAssetBundle];
+    NSString *path = [bundle pathForResource:@"ic_warning@2x" ofType:@"png" inDirectory:@"Images"];
+    return [UIImage imageWithContentsOfFile:path];
+}
+
 @end
