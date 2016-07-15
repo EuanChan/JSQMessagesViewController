@@ -87,7 +87,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mJR-DI-B2t">
-                        <rect key="frame" x="302" y="104" width="20" height="20"/>
+                        <rect key="frame" x="302" y="77" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -95,8 +95,8 @@
             <constraints>
                 <constraint firstItem="mJR-DI-B2t" firstAttribute="leading" secondItem="btS-p8-B7Z" secondAttribute="trailing" constant="8" id="4h4-TV-Kp4"/>
                 <constraint firstItem="UPz-5x-c1T" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="54r-MX-MGW"/>
+                <constraint firstItem="mJR-DI-B2t" firstAttribute="centerY" secondItem="btS-p8-B7Z" secondAttribute="centerY" id="5xt-J8-qTk"/>
                 <constraint firstAttribute="trailing" secondItem="UPz-5x-c1T" secondAttribute="trailing" id="G3U-h0-DWS"/>
-                <constraint firstItem="mJR-DI-B2t" firstAttribute="bottom" secondItem="btS-p8-B7Z" secondAttribute="bottom" id="Hax-nh-OSd"/>
                 <constraint firstAttribute="trailing" secondItem="afj-rd-iNv" secondAttribute="trailing" id="Ka4-Dy-jCS"/>
                 <constraint firstItem="afj-rd-iNv" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="OnD-mZ-QtR"/>
                 <constraint firstItem="Ufa-bF-l1Y" firstAttribute="leading" secondItem="4lh-CK-yVn" secondAttribute="leading" id="Z5z-m3-8Ne"/>
