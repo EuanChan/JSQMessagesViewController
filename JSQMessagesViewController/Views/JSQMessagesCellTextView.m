@@ -37,7 +37,7 @@
     self.scrollIndicatorInsets = UIEdgeInsetsZero;
     self.contentOffset = CGPointZero;
     self.textContainerInset = UIEdgeInsetsZero;
-    self.textContainer.lineFragmentPadding = 0;
+// yytext   self.textContainer.lineFragmentPadding = 0;
     self.linkTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
                                  NSUnderlineStyleAttributeName : @(NSUnderlineStyleSingle | NSUnderlinePatternSolid) };
 }

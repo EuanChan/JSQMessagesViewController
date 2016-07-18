@@ -17,11 +17,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YYText/YYTextView.h>
 
 /**
- *  `JSQMessagesCellTextView` is a subclass of `UITextView` that is used to display text
+ *  `JSQMessagesCellTextView` is a subclass of `YYTextView` that is used to
+ * display text
  *  in a `JSQMessagesCollectionViewCell`.
  */
-@interface JSQMessagesCellTextView : UITextView
+@interface JSQMessagesCellTextView : YYTextView
 
 @end
