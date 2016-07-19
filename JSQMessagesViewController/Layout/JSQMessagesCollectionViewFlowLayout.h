@@ -105,6 +105,11 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault;
 @property (strong, nonatomic) UIFont *messageBubbleFont;
 
 /**
+ *
+ */
+//@property (copy, nonatomic) NSDictionary *messageBubbleTextAttributes;
+
+/**
  *  The horizontal spacing used to lay out the `messageBubbleContainerView` frame within each `JSQMessagesCollectionViewCell`.
  *  This container view holds the message bubble image and message contents of a cell.
  *
@@ -209,5 +214,8 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault;
  *  @return The size of the item displayed at indexPath.
  */
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+
+- (NSMutableAttributedString *)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText;
 
 @end

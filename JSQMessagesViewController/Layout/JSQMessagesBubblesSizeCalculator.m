@@ -116,12 +116,22 @@
         CGFloat horizontalInsetsTotal = horizontalContainerInsets + horizontalFrameInsets + spacingBetweenAvatarAndBubble;
         CGFloat maximumTextWidth = [self textBubbleWidthForLayout:layout] - avatarSize.width - layout.messageBubbleLeftRightMargin - horizontalInsetsTotal;
 
-        CGRect stringRect = [[messageData text] boundingRectWithSize:CGSizeMake(maximumTextWidth, CGFLOAT_MAX)
-                                                             options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
-                                                          attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
-                                                             context:nil];
+//        CGRect stringRect = [[messageData text] boundingRectWithSize:CGSizeMake(maximumTextWidth, CGFLOAT_MAX)
+//                                                             options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading)
+//                                                          attributes:@{ NSFontAttributeName : layout.messageBubbleFont }
+//                                                             context:nil];
 
-        CGSize stringSize = CGRectIntegral(stringRect).size;
+        NSMutableAttributedString *text = [[NSMutableAttributedString alloc]
+                                           initWithString:[messageData text]
+                                           attributes:@{ NSFontAttributeName : layout.messageBubbleFont }];
+        [layout processEmoticonDetectorInAttributesText:text];
+
+        // euan. 后续将排版布局信息优化，计算高度时缓存，绘制时直接取出来，不用重新解析排版
+        CGSize containerSize = CGSizeMake(maximumTextWidth, CGFLOAT_MAX);
+        YYTextContainer *container = [YYTextContainer containerWithSize:containerSize insets:UIEdgeInsetsZero];
+        YYTextLayout *textViewTextLayout = [YYTextLayout layoutWithContainer:container text:text];
+
+        CGSize stringSize = textViewTextLayout.textBoundingSize;
 
         CGFloat verticalContainerInsets = layout.messageBubbleTextViewTextContainerInsets.top + layout.messageBubbleTextViewTextContainerInsets.bottom;
         CGFloat verticalFrameInsets = layout.messageBubbleTextViewFrameInsets.top + layout.messageBubbleTextViewFrameInsets.bottom;

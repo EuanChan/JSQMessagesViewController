@@ -34,6 +34,8 @@
 
 #import "UIImage+JSQMessages.h"
 
+#import "MSTChatTextDetectorContext.h"
+
 
 const CGFloat kJSQMessagesCollectionViewCellLabelHeightDefault = 20.0f;
 const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
@@ -65,7 +67,7 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
     self.minimumLineSpacing = 6.0f;
     
     _messageBubbleFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    
+
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         _messageBubbleLeftRightMargin = 240.0f;
     }
@@ -82,7 +84,18 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
     
     _springinessEnabled = NO;
     _springResistanceFactor = 1000;
-    
+
+//
+//    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+//        [paragraphStyle setParagraphStyle:[NSParagraphStyle defaultParagraphStyle]];
+//    }
+//    paragraphStyle.lineSpacing = 3.f;  // euan. 增加外部可配置行间距
+//    _messageBubbleTextAttributes = @{
+//        NSFontAttributeName : self.messageBubbleFont,
+//        NSParagraphStyleAttributeName : paragraphStyle
+//    };
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(jsq_didReceiveApplicationMemoryWarningNotification:)
                                                  name:UIApplicationDidReceiveMemoryWarningNotification
@@ -427,6 +440,27 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
     finalHeight += 10.f;
     
     return CGSizeMake(self.itemWidth, ceilf(finalHeight));
+}
+
+//- (NSMutableAttributedString *)processDataDetectorWithMessage:(MSTChatMessage *)message originAttributesText:(NSMutableAttributedString *)attText
+//{
+//    // 过滤url和电话号码
+//    [[MSTChatTextDetectorContext sharedInstance]
+//     processDataDetectorInAttributeText:text
+//     withHighlightColor:self.messageBubbleTextLinkColor inYYTextHighlight:self.messageBubbleTextHighlight];
+//
+//    // TODO: 参考 YYKitExample 的 WBURL 对 containUrl 进行封装
+//    for (NSArray *urlInfo in message.containURLs) {
+//        YYTextHighlight *highlight = [self.messageBubbleTextHighlight copy];
+//        highlight.userInfo = @{ @"url" : urlInfo[1] };
+//        [text yy_setColor:self.messageBubbleTextLinkColor range:[urlInfo[0] rangeValue]];
+//        [text yy_setTextHighlight:highlight range:[urlInfo[0] rangeValue]];
+//    }
+//}
+
+- (NSMutableAttributedString *)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText
+{
+    [[MSTChatTextDetectorContext sharedInstance] processEmoticonDetectorInAttributesText:attText];
 }
 
 - (void)jsq_configureMessageCellLayoutAttributes:(JSQMessagesCollectionViewLayoutAttributes *)layoutAttributes
