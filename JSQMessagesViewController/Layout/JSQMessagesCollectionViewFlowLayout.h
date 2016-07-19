@@ -216,6 +216,6 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault;
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 
-- (NSMutableAttributedString *)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText;
+- (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText;
 
 @end
