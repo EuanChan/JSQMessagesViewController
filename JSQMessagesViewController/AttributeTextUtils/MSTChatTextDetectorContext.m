@@ -37,7 +37,7 @@
 }
 
 
-- (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)text
+- (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)text attachmentHeight:(CGFloat)attachmentHeight
 {
     // 配置表情解析的映射表
     NSArray *emoticonResults = [self.emoticonRegularExpression
@@ -63,8 +63,12 @@
             continue;
 
         CGFloat height = image.size.height;
-
-        NSAttributedString *emoText = [NSAttributedString yy_attachmentStringWithEmojiImage:image fontSize:height];
+        NSAttributedString *emoText;
+        if (attachmentHeight > 0) {
+            emoText = [NSAttributedString yy_attachmentStringWithEmojiImage:image fontSize:attachmentHeight];
+        }
+        else
+            emoText = [NSAttributedString yy_attachmentStringWithEmojiImage:image fontSize:height];
         [text replaceCharactersInRange:range withAttributedString:emoText];
         emoClipLength += range.length - 1;
     }

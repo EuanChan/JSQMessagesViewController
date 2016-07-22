@@ -30,7 +30,7 @@
 - (void)configureEmoticonParserWithDictMapper:(NSDictionary *)emoticonParser;
 
 // 写成category
-- (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)text;
+- (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)text attachmentHeight:(CGFloat)attachmentHeight;
 - (void)processDataDetectorInAttributeText:(NSMutableAttributedString *)text withHighlightColor:(UIColor *)highlightColor inYYTextHighlight:(YYTextHighlight *)textHighlight;
 
 @end

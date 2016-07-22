@@ -460,7 +460,7 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
 
 - (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText
 {
-    [[MSTChatTextDetectorContext sharedInstance] processEmoticonDetectorInAttributesText:attText];
+    [[MSTChatTextDetectorContext sharedInstance] processEmoticonDetectorInAttributesText:attText attachmentHeight:0];
 }
 
 - (void)jsq_configureMessageCellLayoutAttributes:(JSQMessagesCollectionViewLayoutAttributes *)layoutAttributes
