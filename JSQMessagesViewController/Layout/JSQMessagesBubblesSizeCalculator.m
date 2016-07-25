@@ -125,6 +125,7 @@
                                            initWithString:[messageData text]
                                            attributes:@{ NSFontAttributeName : layout.messageBubbleFont }];
         [layout processEmoticonDetectorInAttributesText:text];
+        [layout processDataDetectorInAttributeText:text withHighlightColor:nil inYYTextHighlight:nil];
 
         // euan. 后续将排版布局信息优化，计算高度时缓存，绘制时直接取出来，不用重新解析排版
         CGSize containerSize = CGSizeMake(maximumTextWidth, CGFLOAT_MAX);

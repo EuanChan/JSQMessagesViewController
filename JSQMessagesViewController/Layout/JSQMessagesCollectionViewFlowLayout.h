@@ -24,6 +24,7 @@
 #import <UIKit/UIKit.h>
 
 #import "JSQMessagesBubbleSizeCalculating.h"
+#import <YYText/YYTextAttribute.h>
 
 @class JSQMessagesCollectionView;
 
@@ -215,6 +216,10 @@ FOUNDATION_EXPORT const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault;
  */
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
+
+- (void)processDataDetectorInAttributeText:(NSMutableAttributedString *)text
+                        withHighlightColor:(UIColor *)highlightColor
+                         inYYTextHighlight:(YYTextHighlight *)textHighlight;
 
 - (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText;
 

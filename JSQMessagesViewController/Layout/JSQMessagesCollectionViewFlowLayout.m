@@ -458,6 +458,15 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 35.0f;
 //    }
 //}
 
+- (void)processDataDetectorInAttributeText:(NSMutableAttributedString *)text
+                        withHighlightColor:(UIColor *)highlightColor
+                         inYYTextHighlight:(YYTextHighlight *)textHighlight
+{
+    [[MSTChatTextDetectorContext sharedInstance] processDataDetectorInAttributeText:text
+                                                                 withHighlightColor:highlightColor
+                                                                  inYYTextHighlight:textHighlight];
+}
+
 - (void)processEmoticonDetectorInAttributesText:(NSMutableAttributedString *)attText
 {
     [[MSTChatTextDetectorContext sharedInstance] processEmoticonDetectorInAttributesText:attText attachmentHeight:0];

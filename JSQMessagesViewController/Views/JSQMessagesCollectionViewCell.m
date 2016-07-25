@@ -134,6 +134,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     self.sendingFailureImageView.image = [UIImage jsq_sendErrorImage];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jsq_handleTapGesture:)];
+    tap.cancelsTouchesInView = NO;
     [self addGestureRecognizer:tap];
     self.tapGestureRecognizer = tap;
 }
